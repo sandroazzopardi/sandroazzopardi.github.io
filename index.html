@@ -3,137 +3,87 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sandro Azzopardi | Mechanical Manufacturing Engineer in Malta</title>
-  <meta name="description" content="Sandro Azzopardi is a Mechanical Manufacturing Engineer in Malta, specialising in manufacturing engineering, industrialisation, automation and production systems.">
+  <title>Sandro Azzopardi | Malta</title>
+  <meta name="description" content="Sandro Azzopardi — Malta. Connect online through LinkedIn, Instagram and Facebook.">
   <meta name="author" content="Sandro Azzopardi">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://sandroazzopardi.com/">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Sandro Azzopardi | Mechanical Manufacturing Engineer">
-  <meta property="og:description" content="Mechanical Manufacturing Engineer in Malta, focused on manufacturing, industrialisation and automation.">
+  <meta property="og:title" content="Sandro Azzopardi">
+  <meta property="og:description" content="Sandro Azzopardi — Malta.">
   <meta property="og:url" content="https://sandroazzopardi.com/">
   <meta property="og:site_name" content="Sandro Azzopardi">
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Sandro Azzopardi | Mechanical Manufacturing Engineer">
-  <meta name="twitter:description" content="Mechanical Manufacturing Engineer in Malta, focused on manufacturing, industrialisation and automation.">
-
   <style>
     :root {
-      --bg: #f6f7f9;
-      --surface: #ffffff;
+      --bg: #ffffff;
       --text: #18202a;
-      --muted: #5d6875;
+      --muted: #66717e;
       --line: #e2e6eb;
       --accent: #1d5fbf;
-      --accent-dark: #174b95;
-      --max: 920px;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
+      min-height: 100vh;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
       background: var(--bg);
-      line-height: 1.65;
+      display: flex;
+      flex-direction: column;
     }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .wrap { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; }
-    header {
-      background: var(--surface);
-      border-bottom: 1px solid var(--line);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    nav {
-      min-height: 64px;
+    main {
+      flex: 1;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 24px;
+      justify-content: center;
+      padding: 60px 20px;
     }
-    .brand { font-weight: 750; color: var(--text); letter-spacing: -.02em; }
-    .navlinks { display: flex; gap: 20px; font-size: .94rem; }
-    .navlinks a { color: var(--muted); }
-    .hero {
-      padding: 92px 0 76px;
-      background: var(--surface);
-    }
-    .eyebrow {
-      color: var(--accent);
-      font-weight: 700;
-      font-size: .9rem;
-      text-transform: uppercase;
-      letter-spacing: .09em;
-      margin: 0 0 12px;
+    .container {
+      width: min(100%, 760px);
+      text-align: center;
     }
     h1 {
-      font-size: clamp(2.5rem, 7vw, 4.7rem);
-      line-height: 1.03;
-      letter-spacing: -.055em;
-      margin: 0 0 18px;
+      margin: 0 0 80px;
+      font-size: clamp(3rem, 10vw, 6.5rem);
+      line-height: 1;
+      letter-spacing: -.06em;
+      font-weight: 750;
     }
-    .hero h2 {
-      font-size: clamp(1.2rem, 2.5vw, 1.65rem);
-      font-weight: 500;
-      color: var(--muted);
-      margin: 0;
-      max-width: 700px;
+    h2 {
+      margin: 0 0 24px;
+      font-size: 1.5rem;
+      letter-spacing: -.02em;
     }
-    .hero p { max-width: 700px; color: var(--muted); font-size: 1.05rem; }
-    .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-    .button {
+    .links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .link {
       display: inline-block;
-      padding: 11px 17px;
+      min-width: 110px;
+      padding: 11px 18px;
       border: 1px solid var(--line);
       border-radius: 8px;
-      background: var(--surface);
       color: var(--text);
-      font-weight: 650;
+      background: #fff;
+      font-weight: 600;
+      text-decoration: none;
     }
-    .button.primary { background: var(--accent); border-color: var(--accent); color: white; }
-    .button.primary:hover { background: var(--accent-dark); text-decoration: none; }
-    main section { padding: 70px 0; }
-    section + section { border-top: 1px solid var(--line); }
-    h2.section-title { font-size: 1.8rem; margin: 0 0 24px; letter-spacing: -.025em; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-    }
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 24px;
-    }
-    .card h3 { margin: 0 0 8px; font-size: 1.08rem; }
-    .card p { margin: 0; color: var(--muted); }
-    .skills { display: flex; flex-wrap: wrap; gap: 9px; }
-    .skill {
-      padding: 7px 11px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: var(--surface);
-      color: var(--muted);
-      font-size: .92rem;
+    .link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      text-decoration: none;
     }
     footer {
-      padding: 34px 0;
-      border-top: 1px solid var(--line);
+      padding: 25px 20px;
+      text-align: center;
       color: var(--muted);
-      font-size: .9rem;
-    }
-    @media (max-width: 650px) {
-      .wrap { width: min(calc(100% - 28px), var(--max)); }
-      .navlinks { display: none; }
-      .hero { padding: 68px 0 56px; }
-      main section { padding: 52px 0; }
-      .grid { grid-template-columns: 1fr; }
+      font-size: .85rem;
     }
   </style>
 
@@ -143,159 +93,32 @@
     "@type": "Person",
     "name": "Sandro Azzopardi",
     "url": "https://sandroazzopardi.com/",
-    "jobTitle": "Mechanical Manufacturing Engineer",
-    "description": "Mechanical Manufacturing Engineer in Malta specialising in manufacturing, industrialisation, automation and production systems.",
     "sameAs": [
       "YOUR_LINKEDIN_URL",
       "YOUR_INSTAGRAM_URL",
       "YOUR_FACEBOOK_URL"
-    ],
-    "knowsAbout": [
-      "Mechanical engineering",
-      "Manufacturing engineering",
-      "Industrialisation",
-      "Automation",
-      "Production systems",
-      "Design for manufacturing",
-      "Robotics",
-      "Laser welding",
-      "Laser marking",
-      "Inspection systems"
     ]
   }
   </script>
 </head>
 
 <body>
-  <header>
-    <div class="wrap">
-      <nav aria-label="Main navigation">
-        <a class="brand" href="/">Sandro Azzopardi</a>
-        <div class="navlinks">
-          <a href="#about">About</a>
-          <a href="#expertise">Expertise</a>
-          <a href="#projects">Projects</a>
-          <a href="#connect">Connect</a>
-        </div>
-      </nav>
-    </div>
-  </header>
-
   <main>
-    <section class="hero">
-      <div class="wrap">
-        <p class="eyebrow">Mechanical Manufacturing Engineer · Malta</p>
-        <h1>Sandro Azzopardi</h1>
-        <h2>Manufacturing engineering, industrialisation and automation.</h2>
-        <p>
-          I work on turning engineering concepts into robust, manufacturable and
-          efficient production solutions, with a focus on mechanical manufacturing,
-          automation and industrialisation.
-        </p>
-        <div class="buttons">
-          <a class="button primary" href="YOUR_LINKEDIN_URL" rel="me noopener" target="_blank">LinkedIn</a>
-          <a class="button" href="#expertise">Engineering expertise</a>
-        </div>
-      </div>
-    </section>
+    <div class="container">
+      <h1>Sandro Azzopardi</h1>
 
-    <section id="about">
-      <div class="wrap">
-        <h2 class="section-title">About</h2>
-        <p>
-          I am a Mechanical Manufacturing Engineer based in Malta, working across
-          engineering and manufacturing with a practical focus on production,
-          automation and industrialisation.
-        </p>
-        <p>
-          My work combines mechanical engineering with manufacturing process
-          development, production-line concepts, automation and problem solving.
-          I am particularly interested in designing processes that are reliable,
-          efficient and suitable for real-world production.
-        </p>
-      </div>
-    </section>
-
-    <section id="expertise">
-      <div class="wrap">
-        <h2 class="section-title">Engineering expertise</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>Manufacturing & Industrialisation</h3>
-            <p>Process development, production-line concepts, assembly optimisation, DFM and industrialisation.</p>
-          </article>
-          <article class="card">
-            <h3>Automation & Robotics</h3>
-            <p>Automation concepts, robotic processes, machine integration and production equipment.</p>
-          </article>
-          <article class="card">
-            <h3>Inspection & Quality</h3>
-            <p>Vision inspection, 3D inspection, force measurement, process validation and manufacturing quality.</p>
-          </article>
-          <article class="card">
-            <h3>Special Processes</h3>
-            <p>Laser welding, laser marking, fixtures, jigs and other specialised manufacturing processes.</p>
-          </article>
+      <section id="connect">
+        <h2>Connect</h2>
+        <div class="links">
+          <a class="link" href="YOUR_LINKEDIN_URL" rel="me noopener" target="_blank">LinkedIn</a>
+          <a class="link" href="YOUR_INSTAGRAM_URL" rel="me noopener" target="_blank">Instagram</a>
+          <a class="link" href="YOUR_FACEBOOK_URL" rel="me noopener" target="_blank">Facebook</a>
         </div>
-
-        <div class="skills" style="margin-top:24px;">
-          <span class="skill">Mechanical Engineering</span>
-          <span class="skill">Manufacturing Engineering</span>
-          <span class="skill">Industrialisation</span>
-          <span class="skill">Automation</span>
-          <span class="skill">Robotics</span>
-          <span class="skill">Design for Manufacturing</span>
-          <span class="skill">Production Systems</span>
-          <span class="skill">Process Development</span>
-          <span class="skill">Laser Welding</span>
-          <span class="skill">Laser Marking</span>
-          <span class="skill">Inspection Systems</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="wrap">
-        <h2 class="section-title">Projects & interests</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>Production Automation</h3>
-            <p>Developing practical automation concepts to improve assembly, repeatability and production efficiency.</p>
-          </article>
-          <article class="card">
-            <h3>Manufacturing Process Development</h3>
-            <p>Evaluating processes, equipment and fixtures to create robust solutions for production environments.</p>
-          </article>
-          <article class="card">
-            <h3>Engineering Problem Solving</h3>
-            <p>Applying structured engineering analysis and experimentation to manufacturing challenges.</p>
-          </article>
-          <article class="card">
-            <h3>Technology & Innovation</h3>
-            <p>Exploring new manufacturing technologies, automation approaches and practical engineering applications.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="connect">
-      <div class="wrap">
-        <h2 class="section-title">Connect</h2>
-        <p>Find me online:</p>
-        <div class="buttons">
-          <a class="button primary" href="YOUR_LINKEDIN_URL" rel="me noopener" target="_blank">LinkedIn</a>
-          <a class="button" href="YOUR_INSTAGRAM_URL" rel="me noopener" target="_blank">Instagram</a>
-          <a class="button" href="YOUR_FACEBOOK_URL" rel="me noopener" target="_blank">Facebook</a>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
 
-  <footer>
-    <div class="wrap">
-      © <span id="year"></span> Sandro Azzopardi · Malta
-    </div>
-  </footer>
+  <footer>© <span id="year"></span> Sandro Azzopardi</footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
