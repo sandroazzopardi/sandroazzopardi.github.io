@@ -13,11 +13,17 @@ function renderDetail(){const root=$('detail'),r=visible().find(r=>r.id===select
 function renderMap(){if(!layer)return;layer.clearLayers();const list=visible();list.forEach(r=>{const line=L.polyline(r.segments,{color:colors[bandOf(r.distance)],weight:r.id===selected?7:4,opacity:r.id===selected?1:.82}).addTo(layer);line.on('click',()=>select(r.id));line.bindTooltip(node('div','',r.name+' · '+r.distance.toFixed(1)+' km'+(r.durationSeconds?' · '+formatDuration(r.durationSeconds)+' total time':'')),{sticky:true});L.circleMarker(r.segments[0][0],{radius:r.id===selected?7:4,color:'#fff',weight:2,fillColor:colors[bandOf(r.distance)],fillOpacity:1}).addTo(layer).on('click',()=>select(r.id))});if(selected)layer.eachLayer(l=>{if(l instanceof L.Polyline&&l.options.weight===7)l.bringToFront()})}
 function render(){
  renderFilters();const list=visible(),root=$('route-list');root.replaceChildren();$('count').textContent=list.length;
- $('map-count').textContent=list.length+' '+(list.length===1?'route':'routes')+' visible'+(loading?' · loading…':'');
+ $('map-count').textContent=list.length+' '+(list.length===1?'route':'routes')+' visible'+(loading?' · loading treks…':'');
  $('welcome').hidden=loading||!!loadError||routes.length>0;
  if(loadError){const box=node('div','list-state');box.append(node('p','',loadError));const retry=node('button','retry','Try again');retry.onclick=load;box.append(retry);root.append(box)}
  else{
-  if(loading)root.append(node('div','list-state',total?'Loading routes… '+completed+' of '+total+' processed':'Loading route collection…'));
+  if(loading){
+   const status=node('div','trek-loading');status.style.cssText='padding:14px 0 18px';status.setAttribute('role','status');
+   const label=node('div','',total?'Loading treks · '+routes.length+' of '+total+' ready':'Loading treks…');label.style.cssText='font-size:14px;font-weight:600;margin-bottom:10px;color:var(--ink)';
+   const bar=node('progress','');bar.style.cssText='display:block;width:100%;height:10px;accent-color:var(--green)';bar.setAttribute('aria-label','Trek loading progress');
+   if(total){bar.max=total;bar.value=completed;bar.setAttribute('aria-valuetext',completed+' of '+total+' files checked, '+routes.length+' treks ready')}else{bar.removeAttribute('value')}
+   status.append(label,bar);root.append(status);
+  }
   if(warnings.length)root.append(node('div','load-warning',warnings.length+' '+(warnings.length===1?'route could':'routes could')+' not be loaded: '+warnings.join(' • ')));
   if(!routes.length&&!loading){const empty=node('div','empty-list');empty.append(node('h3','','The collection is on its way.'),node('p','','Check back soon for routes across Malta and Gozo.'));root.append(empty)}
   else if(routes.length&&!list.length){const box=node('div','list-state');box.append(node('p','',loading?'No matching routes loaded yet.':'No routes in these ranges yet.'));const reset=node('button','','Show all routes');reset.onclick=()=>{filters.clear();render();fit(true)};box.append(reset);root.append(box)}
